@@ -1,12 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajo final</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #004d40, #00796b);
+      padding: 40px 0;
+      color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    header .nav-link {
+      margin: 10px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      background-color: #26a69a;
+      border-radius: 50px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    header .nav-link:hover {
+      background-color: #ffffff;
+      color: #004d40;
+      transform: translateY(-3px);
+    }
+
+    header .nav-link:active {
+      transform: translateY(1px);
+    }
+
+    section {
+      margin: 50px auto;
+      padding: 30px;
+      width: 80%;
+      max-width: 1000px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    section h2 {
+      border-bottom: 3px solid #26a69a;
+      padding-bottom: 15px;
+      text-align: center;
+      width: 100%;
+      font-size: 1.5rem;
+    }
+
+    .centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      max-height: 80vh;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      font-size: 1em;
+      background: #1d1d1d;
+      color: #ccc;
+      border-top: 2px solid #26a69a;
+    }
+
+    footer a {
+      color: #26a69a;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-<iframe width="100%" height="500" frameborder="0"
-  src="https://observablehq.com/embed/65b65a8d57817808@166?cell=*"></iframe>
+  <header>
+    <div class="container text-center">
+      <h1 class="display-4 mb-3">Trabajo final InfoVis</h1>
+      <p class="lead mb-4">Londres</p>
+      <nav class="d-flex justify-content-center">
+        <a href="javascript:void(0);" onclick="scrollToSection('grafico1')" class="nav-link">📍 Cantidad de anuncios por barrio</a>
+        <a href="javascript:void(0);" onclick="scrollToSection('grafico2')" class="nav-link">💵 Precio promedio por barrio</a>
+        <a href="javascript:void(0);" onclick="scrollToSection('grafico3')" class="nav-link">📈 Correlación precio ~ cantidad de anuncios</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="grafico1" class="centered">
+    <h2>¿Cuáles son los barrios con mayor cantidad de anuncios?</h2>
+    <p>Muestra la concentración de anuncios por barrio en Londres como mapa de calor.</p>
+    <iframe width="100%" height="579" frameborder="0"
+      src="https://observablehq.com/embed/ab02693f608f68be@228?cells=heatmap_2"></iframe>
+    <p>Top de las ciudades con más anuncios.</p>
+    <iframe width="100%" height="690" frameborder="0"
+      src="https://observablehq.com/embed/ab02693f608f68be@240?cells=viewof+top%2Cbar"></iframe>
+  </section>
+
+  <section id="grafico2" class="centered">
+    <h2>¿Cuáles son las ciudades con mayor precio promedio?</h2>
+    <p>Muestra los precios promedio por ciudad según top.</p>
+    <iframe width="100%" height="690" frameborder="0"
+      src="https://observablehq.com/embed/ab02693f608f68be@243?cells=viewof+max%2Cbar_2"></iframe>
+  </section>
+
+  <section id="grafico3" class="centered">
+    <h2>¿Hay relación entre el precio y la cantidad de anuncios?</h2>
+    <p>Representación del precio promedio en función de la cantidad de anuncios (por barrio).</p>
+    <iframe width="100%" height="647" frameborder="0"
+      src="https://observablehq.com/embed/ab02693f608f68be@245?cells=scater"></iframe>
+  </section>
+
+  <footer>
+    <p>Trabajo final realizado por <a href="#">[Tu Nombre]</a></p>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
