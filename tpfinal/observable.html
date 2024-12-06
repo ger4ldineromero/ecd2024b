@@ -115,7 +115,18 @@
     footer a:hover {
       text-decoration: underline;
     }
-
+table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
     @media (max-width: 768px) {
       section {
         padding: 20px;
@@ -137,6 +148,37 @@
     </div>
   </header>
 
+  <section id="variables" class="container mt-5">
+  <h2 class="text-center">Descripción de Variables</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Campo</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>id</td><td>integer</td></tr>
+      <tr><td>name</td><td>string</td></tr>
+      <tr><td>host_id</td><td>integer</td></tr>
+      <tr><td>host_name</td><td>string</td></tr>
+      <tr><td>neighbourhood_group</td><td>text</td></tr>
+      <tr><td>neighbourhood</td><td>text</td></tr>
+      <tr><td>latitude</td><td>numeric</td></tr>
+      <tr><td>longitude</td><td>numeric</td></tr>
+      <tr><td>room_type</td><td>string</td></tr>
+      <tr><td>price</td><td>currency</td></tr>
+      <tr><td>minimum_nights</td><td>integer</td></tr>
+      <tr><td>number_of_reviews</td><td>integer</td></tr>
+      <tr><td>last_review</td><td>date</td></tr>
+      <tr><td>reviews_per_month</td><td>numeric (2 decimal places)</td></tr>
+      <tr><td>calculated_host_listings_count</td><td>integer</td></tr>
+      <tr><td>availability_365</td><td>integer</td></tr>
+    </tbody>
+  </table>
+</section>
+
+  
   <section id="grafico1" class="centered">
     <h2>¿Cuáles son los barrios con mayor cantidad de anuncios?</h2>
     <p>Muestra la concentración de anuncios por barrio en Londres como mapa de calor.</p>
