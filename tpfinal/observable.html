@@ -155,35 +155,37 @@ table {
     </div>
   </header>
 
-  <section id="variables" class="centered">
+ <section id="variables" class="centered">
   <h2 class="text-center">Descripción de Variables</h2>
   <table class="table table-striped custom-table">
     <thead>
       <tr>
         <th>Campo</th>
         <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>id</td><td>integer</td></tr>
-      <tr><td>name</td><td>string</td></tr>
-      <tr><td>host_id</td><td>integer</td></tr>
-      <tr><td>host_name</td><td>string</td></tr>
-      <tr><td>neighbourhood_group</td><td>text</td></tr>
-      <tr><td>neighbourhood</td><td>text</td></tr>
-      <tr><td>latitude</td><td>numeric</td></tr>
-      <tr><td>longitude</td><td>numeric</td></tr>
-      <tr><td>room_type</td><td>string</td></tr>
-      <tr><td>price</td><td>currency</td></tr>
-      <tr><td>minimum_nights</td><td>integer</td></tr>
-      <tr><td>number_of_reviews</td><td>integer</td></tr>
-      <tr><td>last_review</td><td>date</td></tr>
-      <tr><td>reviews_per_month</td><td>numeric (2 decimal places)</td></tr>
-      <tr><td>calculated_host_listings_count</td><td>integer</td></tr>
-      <tr><td>availability_365</td><td>integer</td></tr>
+      <tr><td>id</td><td>integer</td><td>Airbnb's unique identifier for the listing</td></tr>
+      <tr><td>name</td><td>string</td><td>Nombre del alojamiento</td></tr>
+      <tr><td>host_id</td><td>integer</td><td>identificador del host</td></tr>
+      <tr><td>host_name</td><td>string</td><td>nombre del host</td></tr>
+      <tr><td>neighbourhood_group</td><td>text</td><td>The neighbourhood group as geocoded using the latitude and longitude against neighborhoods as defined by open or public digital shapefiles.</td></tr>
+      <tr><td>neighbourhood</td><td>text</td><td>The neighbourhood as geocoded using the latitude and longitude against neighborhoods as defined by open or public digital shapefiles.</td></tr>
+      <tr><td>latitude</td><td>numeric</td><td>Uses the World Geodetic System (WGS84) projection for latitude and longitude.</td></tr>
+      <tr><td>longitude</td><td>numeric</td><td>Uses the World Geodetic System (WGS84) projection for latitude and longitude.</td></tr>
+      <tr><td>room_type</td><td>string</td><td>tipo de habitacion</td></tr>
+      <tr><td>price</td><td>currency</td><td>daily price in local currency. Note, $ sign may be used despite locale</td></tr>
+      <tr><td>minimum_nights</td><td>integer</td><td>minimum number of night stay for the listing (calendar rules may be different)</td></tr>
+      <tr><td>number_of_reviews</td><td>integer</td><td>The number of reviews the listing has</td></tr>
+      <tr><td>last_review</td><td>date</td><td>The date of the last/newest review</td></tr>
+      <tr><td>reviews_per_month</td><td>numeric (2 decimal places)</td><td>cantidad de reviews al mes</td></tr>
+      <tr><td>calculated_host_listings_count</td><td>integer</td><td>The number of listings the host has in the current scrape, in the city/region geography.</td></tr>
+      <tr><td>availability_365</td><td>integer</td><td>avaliability_x. The availability of the listing x days in the future as determined by the calendar. Note a listing may be available because it has been booked by a guest or blocked by the host.</td></tr>
     </tbody>
   </table>
 </section>
+
 
   
   <section id="grafico1" class="centered">
